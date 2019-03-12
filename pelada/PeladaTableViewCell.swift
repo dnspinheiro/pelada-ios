@@ -16,7 +16,7 @@ class PeladaTableViewCell: UITableViewCell {
     @IBOutlet weak var quantidadeLabel: UILabel!
     @IBOutlet weak var horarioLabel: UILabel!
     
-    
+    // classe de item para carregamento de  cada pelada
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

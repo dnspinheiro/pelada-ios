@@ -38,6 +38,7 @@ class PeladaTableViewController: UITableViewController {
         return peladas.count
     }
     
+    //carregamento de peladas baseado em layout de item de pelada
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identificador = "PeladaTableViewCell"
         
@@ -97,7 +98,7 @@ class PeladaTableViewController: UITableViewController {
             let peladaSelecionada = peladas[indexPath.row]
             detalhesDaPeladaViewController.pelada = peladaSelecionada
         default:
-            fatalError("Identificador do segue desconhecido: \(segue.identifier ?? "")")
+            fatalError("Identificador do segue unknown: \(segue.identifier ?? "")")
         }
     }
     
@@ -105,6 +106,7 @@ class PeladaTableViewController: UITableViewController {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Pelada.caminhoURL.path) as? [Pelada]
     }
     
+    // funcao que executa depois de clickar em botao "salvaar" pelada
     @IBAction func voltarPeladas(sender: UIStoryboardSegue) {
         if let viewControllerInicial = sender.source as? ViewController, let pelada = viewControllerInicial.pelada {
             if let indexPathSelecionado = tableView.indexPathForSelectedRow {
@@ -112,11 +114,11 @@ class PeladaTableViewController: UITableViewController {
                 tableView.reloadRows(at: [indexPathSelecionado], with: .none)
             } else {
                 let novoIndexPath = IndexPath(row: peladas.count, section: 0)
-                
+
                 peladas.append(pelada)
                 tableView.insertRows(at: [novoIndexPath], with: .automatic)
             }
-            
+
             salvarPeladas()
         }
     }

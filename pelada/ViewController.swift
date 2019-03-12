@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         quantidadeTextField.delegate = self
         horarioTextField.delegate = self
         
+        // bind de itens de tela com valores
         if let pelada = pelada {
             navigationItem.title = pelada.nome
             nomeTextField.text = pelada.nome
@@ -53,7 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         atualizarBotaoSalvar()
         navigationItem.title = textField.text
     }
-    
+//    função de chamada para click de botão "cacelar" em bar action
     @IBAction func cancelar(_ sender: UIBarButtonItem) {
         let estaAdicionandoPelada = presentingViewController is UINavigationController
         if estaAdicionandoPelada{
@@ -65,13 +66,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         }
     }
     
+//    habilitar botao de "salvar" quando for digitado algo em nome
     private func atualizarBotaoSalvar() {
         let texto = nomeTextField.text ?? ""
-//        let quantidade = quantidadeTextField.text ?? ""
-//        let horario = horarioTextField.text ?? ""
         salvarButton.isEnabled = !texto.isEmpty
     }
     
+    //prepara envio de dados de opelada para salvar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
