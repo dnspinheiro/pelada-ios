@@ -12,6 +12,9 @@
 		ACF82144222733ED0047AB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF82142222733ED0047AB9C /* Main.storyboard */; };
 		ACF82146222733EF0047AB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF82145222733EF0047AB9C /* Assets.xcassets */; };
 		ACF82149222733EF0047AB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF82147222733EF0047AB9C /* LaunchScreen.storyboard */; };
+		ACF8215122273F0B0047AB9C /* Pelada.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8215022273F0B0047AB9C /* Pelada.swift */; };
+		ACF82155222744350047AB9C /* PeladaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF82154222744350047AB9C /* PeladaTableViewController.swift */; };
+		ACF82157222744650047AB9C /* PeladaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF82156222744650047AB9C /* PeladaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		ACF82145222733EF0047AB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF82148222733EF0047AB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF8214A222733EF0047AB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF8215022273F0B0047AB9C /* Pelada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pelada.swift; sourceTree = "<group>"; };
+		ACF82154222744350047AB9C /* PeladaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeladaTableViewController.swift; sourceTree = "<group>"; };
+		ACF82156222744650047AB9C /* PeladaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeladaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				ACF8213E222733ED0047AB9C /* AppDelegate.swift */,
 				ACF82140222733ED0047AB9C /* ViewController.swift */,
+				ACF82154222744350047AB9C /* PeladaTableViewController.swift */,
+				ACF8215022273F0B0047AB9C /* Pelada.swift */,
 				ACF82142222733ED0047AB9C /* Main.storyboard */,
 				ACF82145222733EF0047AB9C /* Assets.xcassets */,
 				ACF82147222733EF0047AB9C /* LaunchScreen.storyboard */,
 				ACF8214A222733EF0047AB9C /* Info.plist */,
+				ACF82156222744650047AB9C /* PeladaTableViewCell.swift */,
 			);
 			path = pelada;
 			sourceTree = "<group>";
@@ -135,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF82155222744350047AB9C /* PeladaTableViewController.swift in Sources */,
 				ACF82141222733ED0047AB9C /* ViewController.swift in Sources */,
+				ACF82157222744650047AB9C /* PeladaTableViewCell.swift in Sources */,
+				ACF8215122273F0B0047AB9C /* Pelada.swift in Sources */,
 				ACF8213F222733ED0047AB9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
